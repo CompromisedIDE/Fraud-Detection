@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": "20260329_013214",
+    "model_path": "models/fraud_model_xgboost_20260329_013214.pkl",
+    "scaler_path": "models/scaler_20260329_013214.pkl",
+    "metrics": {
+      "auc_roc": 0.9808,
+      "precision": 0.5733,
+      "recall": 0.8776,
+      "f1_score": 0.6935,
+      "true_positives": 86,
+      "false_negatives": 12,
+      "false_positives": 64,
+      "true_negatives": 56800
+    }
+  },
+  {
+    "timestamp": "20260329_014315",
+    "model_path": "models/fraud_model_xgboost_20260329_014315.pkl",
+    "scaler_path": "models/scaler_20260329_014315.pkl",
+    "metrics": {
+      "auc_roc": 0.9808,
+      "precision": 0.5733,
+      "recall": 0.8776,
+      "f1_score": 0.6935,
+      "true_positives": 86,
+      "false_negatives": 12,
+      "false_positives": 64,
+      "true_negatives": 56800
+    }
+  }
+]

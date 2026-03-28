@@ -179,3 +179,37 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+# --- Virtual Environment (CRITICAL) ---
+venv/
+env/
+.env
+
+# --- VS Code Settings ---
+.vscode/
+.idea/
+
+# --- Data Science Junk ---
+.ipynb_checkpoints/
+*.xlsx
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+# Trained models can sometimes get huge. 
+*.pkl
+*.h5
+*.joblib
+# Fraud Detection
+
+# Dataset - too large for GitHub
+creditcard.csv
+
+# Runtime generated files
+prediction_log.csv
+fraud_detection.log
+
+# Keep models folder but ignore pkl files
+models/*.pkl
+
+# Keep model_registry.json - do NOT ignore it
+!models/model_registry.json
