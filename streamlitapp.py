@@ -150,7 +150,7 @@ st.markdown("""
 with st.sidebar:
     st.markdown('<div class="section-label">API Status</div>', unsafe_allow_html=True)
     try:
-        requests.get("http://127.0.0.1:8000/docs", timeout=3)
+        requests.get("http://127.0.0.1:8000/health", timeout=3)
         st.markdown('<div class="api-status-ok">● FastAPI connected</div>', unsafe_allow_html=True)
     except Exception:
         st.markdown('<div class="api-status-err">● FastAPI offline</div>', unsafe_allow_html=True)

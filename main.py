@@ -18,6 +18,9 @@ app=FastAPI(
     description='API for detecting fraudulent transactions using a trained XGBoost model.',
     version="1.0"
 )
+@app.get("/health")
+def health():
+    return {"status": "ok", "model_loaded": model is not None}
 logger.info("Loading the model and scaler...")
 try:
     model=joblib.load(MODEL_PATH)
