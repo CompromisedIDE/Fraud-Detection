@@ -6,7 +6,10 @@ import datetime
 import json
 from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import (
+    classification_report, confusion_matrix,
+    roc_auc_score, f1_score, precision_score, recall_score
+)
 from imblearn.over_sampling import SMOTE
 from src.config import DATA_PATH, MODEL_PATH, SCALER_PATH, SEED, TEST_SIZE, MODEL_PARAMS
 from src.features import add_engineered_features, scale_data
@@ -53,9 +56,6 @@ logger.info("Evaluating model performance on test set...")
 y_pred = model.predict(X_test_scaled)
 y_pred_proba = model.predict_proba(X_test_scaled)[:, 1]
 
-from sklearn.metrics import (
-    roc_auc_score, f1_score, precision_score, recall_score
-)
 
 cm = confusion_matrix(y_test, y_pred)
 report = classification_report(y_test, y_pred, target_names=["Legitimate", "Fraud"])
