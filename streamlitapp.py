@@ -146,7 +146,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Sidebar
 with st.sidebar:
     st.markdown('<div class="section-label">API Status</div>', unsafe_allow_html=True)
     try:
@@ -159,12 +158,10 @@ with st.sidebar:
     st.markdown('<div class="section-label">Model</div>', unsafe_allow_html=True)
     st.caption("XGBoost classifier. Class imbalance handled with SMOTE. Features V1-V28 are PCA-transformed components from the Kaggle Credit Card Fraud dataset.")
 
-# Header
 st.markdown("<h1>Fraud Detection</h1>", unsafe_allow_html=True)
 st.markdown('<div class="subtitle">// XGBoost · SMOTE · FastAPI · Real-time</div>', unsafe_allow_html=True)
 st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
-# Default payload
 default_payload = {
     "Time": 0.0, "Amount": 149.62,
     "V1": -1.359807, "V2": -0.072781, "V3": 2.536347, "V4": 1.378155,
@@ -185,7 +182,7 @@ user_input = st.text_area(
     label_visibility="collapsed"
 )
 
-# Predict
+
 if st.button("Analyze Transaction"):
     try:
         payload = json.loads(user_input)
